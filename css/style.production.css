@@ -1,0 +1,459 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+
+ * {
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+ }
+
+ html {
+     position: relative;
+     min-height: 100%;
+ }
+
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 90px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 2;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 2;
+  text-align: center;
+}
+
+a {
+  color: #357b70;
+}
+
+a:visited {
+  color: #05676e;
+}
+
+a:hover, a:focus {
+  /*No underlining when hovering over a link*/
+  text-decoration: none;
+}
+
+a:active {
+  color: #489c79;
+}
+
+p {
+  padding: 2px;
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* ovewrites default browser font for this element */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.)*/
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  /*adds spacing to the button*/
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  /*
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  */
+  /*shorter way to write the above*/
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+}
+
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* ovewrites default browser font for this element */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.)*/
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  /*adds spacing to the button*/
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  /*
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  */
+  /*shorter way to write the above*/
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: #e0b354;
+  color: undefined;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.profile__portrait {
+  height: auto;
+  width: 250px;
+  float: left;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.profile {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#text_reversed_color {
+  background-color: black;
+  color: white;
+}
+
+#homepagelinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  min-width: 100px;
+  clear: both;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#impressum {
+  margin: 80px 0px 0px 60px;
+}
+
+.page-footer {
+  background-color: white;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.social-media {
+
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 40px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  height: 60px;
+}
+
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+.page-top {
+  padding-top: 60px;
+}
+
+section {
+  text-align: center;
+  padding: 40px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  grid-gap: 20px;
+  width: 80%;
+}
+
+.grid__item {
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.grid__item:last-child {
+  -ms-grid-column: 3;
+  grid-column: 3 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+/* this is a primitive version of the code above
+.grid__item:last-child {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+*/
+
+form {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  min-width: 320px;
+}
+
+table {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+/* loger way to write the all media thing
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+  .grid-item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+*/
+
+/* more compact writing of all media formatting with common parameters presented together*/
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid__item:last-child {
+    grid-row: auto / auto;
+    grid-column: auto / auto;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.about {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.animation {
+  text-align: center;
+  margin: 40px;
+}
+
+table {
+  border: 1px solid black;
+  border-radius: 2px;
+
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+/* long way to write animation
+.sun {
+  animation-duration: 4s;
+  animation-name: "color-change";
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+*/
+
+.sun {
+   -webkit-animation: 4s color-change infinite alternate linear;
+           animation: 4s color-change infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  } to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  } to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate ease-in;
+          animation: 30s cloud-move infinite alternate ease-in;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+ from {
+   -webkit-transform: translate(446px, 48px);
+           transform: translate(446px, 48px);
+   } to {
+   -webkit-transform: translate(40px, 48px);
+           transform: translate(40px, 48px);
+   }
+ }
+
+@keyframes cloud-move-reverse {
+ from {
+   -webkit-transform: translate(446px, 48px);
+           transform: translate(446px, 48px);
+   } to {
+   -webkit-transform: translate(40px, 48px);
+           transform: translate(40px, 48px);
+   }
+ }
+
+ .cloud-back {
+   -webkit-animation: 34s cloud-move-reverse infinite alternate ease-out;
+           animation: 34s cloud-move-reverse infinite alternate ease-out;
+ }
