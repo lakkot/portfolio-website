@@ -7,129 +7,132 @@ Text Color (Dark Gray): #2b2b2b;
 Primary Color (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
  */
+:root {
+  --header-height: 60px;
+  --primary-color: #357b70;
+  --primary-color-reverse: white;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  --background-color: white;
+  --background-color-grid: lightgray;
+  --visited: #05676e;
+  --active: #489c79;
+  --font-size-large: 30px;
+  --font-size-medium: 20px;
+  --font-size-small: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
 
- * {
-   -webkit-box-sizing: border-box;
-           box-sizing: border-box;
- }
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
- html {
-     position: relative;
-     min-height: 100%;
- }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
-  background-color: white;
+  background-color: var(--background-color);
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-small);
   line-height: 1.6;
   margin: 0 0 90px;
 }
 
 h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
   line-height: 2;
   text-align: center;
 }
 
 h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
   line-height: 2;
   text-align: center;
 }
 
 h3 {
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-normal);
   font-style: italic;
   line-height: 2;
   text-align: center;
 }
 
 a {
-  color: #357b70;
+  color: var(--primary-color);
 }
 
 a:visited {
-  color: #05676e;
+  color: var(--visited);
 }
 
-a:hover, a:focus {
-  /*No underlining when hovering over a link*/
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
   text-decoration: none;
 }
 
 a:active {
-  color: #489c79;
+  color: var(--active);
 }
 
 p {
   padding: 2px;
 }
 
-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  /* ovewrites default browser font for this element */
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.)*/
-  background-color: #357b70;
-  color: white;
-  text-decoration: none;
-  /*adds spacing to the button*/
-  padding: 10px;
-  border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  /*
-  transition-duration: 0.5s;
-  transition-property: opacity;
-  */
-  /*shorter way to write the above*/
-  -webkit-transition: 0.5s opacity;
-  -o-transition: 0.5s opacity;
-  transition: 0.5s opacity;
-}
-
+button,
 .button {
   /* overwrites browser defaults and resets the border */
   border: none;
+
   /* ovewrites default browser font for this element */
   font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.)*/
-  background-color: #357b70;
-  color: white;
+
+  /* styles the background color, font color, and text decoration (underline, etc.) */
+  background-color: var(--primary-color);
+  color: var(--primary-color-reverse);
   text-decoration: none;
-  /*adds spacing to the button*/
+
+  /*  adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
   /*
   transition-duration: 0.5s;
   transition-property: opacity;
   */
-  /*shorter way to write the above*/
+
+  /* shorter way to write the above */
   -webkit-transition: 0.5s opacity;
   -o-transition: 0.5s opacity;
   transition: 0.5s opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   opacity: 0.8;
 }
 
 .button__secondary {
-  background-color: #e0b354;
-  color: undefined;
+  background-color: var(--secondary-color);
+  color: var(--darkgrey);
 }
 
 .navigation-list {
@@ -139,6 +142,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 .navigation-list__item--active {
   text-decoration: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
@@ -186,7 +190,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .page-footer {
-  background-color: white;
+  background-color: var(--background-color);
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,10 +223,10 @@ button:hover, button:focus, .button:hover, .button:focus {
           align-items: center;
   width: 100%;
   padding: 40px;
-  background-color: white;
+  background-color: var(--background-color);
   position: fixed;
   top: 0;
-  height: 60px;
+  height: var(--header-height);
 }
 
 .page-header__item {
@@ -239,7 +243,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .page-top {
-  padding-top: 60px;
+  padding-top: var(--header-height);
 }
 
 section {
@@ -259,7 +263,7 @@ section {
 
 .grid__item {
   padding: 10px;
-  background-color: lightgray;
+  background-color: var(--background-color-grid);
 }
 
 .grid__item:last-child {
@@ -345,7 +349,7 @@ table {
     grid-column: auto / auto;
   }
   h1 {
-    font-size: 20px;
+    font-size: var(--font-size-medium);
   }
 }
 
@@ -366,7 +370,6 @@ ul {
 table {
   border: 1px solid black;
   border-radius: 2px;
-
 }
 
 @-webkit-keyframes color-change {
@@ -404,8 +407,8 @@ table {
 */
 
 .sun {
-   -webkit-animation: 4s color-change infinite alternate linear;
-           animation: 4s color-change infinite alternate linear;
+  -webkit-animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
@@ -434,26 +437,26 @@ table {
 }
 
 @-webkit-keyframes cloud-move-reverse {
- from {
-   -webkit-transform: translate(446px, 48px);
-           transform: translate(446px, 48px);
-   } to {
-   -webkit-transform: translate(40px, 48px);
-           transform: translate(40px, 48px);
-   }
- }
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  } to {
+    -webkit-transform: translate(40px, 48px);
+            transform: translate(40px, 48px);
+  }
+}
 
 @keyframes cloud-move-reverse {
- from {
-   -webkit-transform: translate(446px, 48px);
-           transform: translate(446px, 48px);
-   } to {
-   -webkit-transform: translate(40px, 48px);
-           transform: translate(40px, 48px);
-   }
- }
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  } to {
+    -webkit-transform: translate(40px, 48px);
+            transform: translate(40px, 48px);
+  }
+}
 
- .cloud-back {
-   -webkit-animation: 34s cloud-move-reverse infinite alternate ease-out;
-           animation: 34s cloud-move-reverse infinite alternate ease-out;
- }
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate ease-out;
+          animation: 34s cloud-move-reverse infinite alternate ease-out;
+}
