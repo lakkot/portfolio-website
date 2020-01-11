@@ -1,7 +1,12 @@
 "use strict"
 
 module.exports = {
+  "plugins": [
+    "stylelint-declaration-use-variable"
+  ],
+
   "rules": {
+    "sh-waqar/declaration-use-variable": true,
     "at-rule-no-unknown": true,
     "block-no-empty": true,
     "color-no-invalid-hex": true,
