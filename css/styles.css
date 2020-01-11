@@ -5,32 +5,31 @@ Text Color (Dark Gray): #2b2b2b;
 Primary Color (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
  */
+:root {
+  --header-height: 60px;
+  --primary-color: #357b70;
+  --primary-color-reverse: white;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  --background-color: white;
+  --background-color-grid: lightgray;
+  --visited: #05676e;
+  --active: #489c79;
+  --font-size-large: 30px;
+  --font-size-medium: 20px;
+  --font-size-small: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
 
- :root {
-   --header-height: 60px;
-   --primary-color: #357b70;
-   --primary-color-reverse: white;
-   --secondary-color: #e0b354;
-   --dark-grey: #2b2b2b;
-   --background-color: white;
-   --background-color-grid: lightgray;
-   --visited: #05676e;
-   --active: #489c79;
-   --font-size-large: 30px;
-   --font-size-medium: 20px;
-   --font-size-small: 16px;
-   --font-weight-normal: 400;
-   --font-weight-bold: 700;
- }
+* {
+  box-sizing: border-box;
+}
 
- * {
-   box-sizing: border-box;
- }
-
- html {
-     position: relative;
-     min-height: 100%;
- }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   background-color: var(--background-color);
@@ -74,8 +73,9 @@ a:visited {
   color: var(--visited);
 }
 
-a:hover, a:focus {
-  /*No underlining when hovering over a link*/
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
   text-decoration: none;
 }
 
@@ -87,29 +87,39 @@ p {
   padding: 2px;
 }
 
-button, .button {
+button,
+.button {
   /* overwrites browser defaults and resets the border */
   border: none;
+
   /* ovewrites default browser font for this element */
   font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.)*/
+
+  /* styles the background color, font color, and text decoration (underline, etc.) */
   background-color: var(--primary-color);
   color: var(--primary-color-reverse);
   text-decoration: none;
-  /*adds spacing to the button*/
+
+  /*  adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
   /*
   transition-duration: 0.5s;
   transition-property: opacity;
   */
-  /*shorter way to write the above*/
+
+  /* shorter way to write the above */
   transition: 0.5s opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   opacity: 0.8;
@@ -127,6 +137,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 .navigation-list__item--active {
   text-decoration: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
@@ -326,7 +337,6 @@ ul {
 table {
   border: 1px solid black;
   border-radius: 2px;
-
 }
 
 @keyframes color-change {
@@ -352,7 +362,7 @@ table {
 */
 
 .sun {
-   animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 @keyframes cloud-move {
@@ -368,13 +378,13 @@ table {
 }
 
 @keyframes cloud-move-reverse {
- from {
-   transform: translate(446px, 48px);
-   } to {
-   transform: translate(40px, 48px);
-   }
- }
+  from {
+    transform: translate(446px, 48px);
+  } to {
+    transform: translate(40px, 48px);
+  }
+}
 
- .cloud-back {
-   animation: 34s cloud-move-reverse infinite alternate ease-out;
- }
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate ease-out;
+}
