@@ -284,8 +284,8 @@ form {
   display: grid;
   margin: 0 auto;
   text-align: center;
-  width: 500px;
-  min-width: 320px;
+  width: 300px;
+  min-width: 100px;
 }
 
 table {
