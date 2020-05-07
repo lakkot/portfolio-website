@@ -309,6 +309,9 @@ table {
   padding: 10px;
 }
 
+.social-media a {
+  padding: 10px;
+}
 /* loger way to write the all media thing
 @media all and (max-width: 500px) {
   .grid {
