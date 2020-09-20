@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.production.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.production.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -22,13 +22,10 @@
 					<a href="index.html" role="menuitem" class="navigation-list__item" >Home</a>
 				</li>
 				<li role="presentation">
-					<a href="about.html" role="menuitem" class="navigation-list__item">About</a>
-				</li>
-				<li role="presentation">
-					<a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-				</li>
-				<li role="presentation">
 					<a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">My work</a>
+        </li>
+        <li role="presentation">
+					<a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
 				</li>
 			</ul>
 		</nav>
@@ -39,41 +36,81 @@
 	<section>
 		<h1>See some of my work here</h1>
 		<div class="grid">
-			<!--Grid items will be added here-->
+      <!--Grid items will be added here-->
+      
 			<div class="grid__item">
-				<h2>My Movies App (MERN)</h2>
-        <p> Full stack project built with MongoDB, Express.js, React and Node.js (MERN). User can scroll through database of movies, check information about director and genre and create her own personal favorites list. </p>
+        <h2>My Movies App (MERN)</h2>
+        <img src="img/myMovies.png" class="project__photo" alt="My Photo" >
+        <p class="grid__item_p">Full stack project built with MongoDB, Express.js, React and Node.js (MERN). User can scroll through database of movies, check information about director and genre and create her own personal favorites list. </p>
         <div class="project-links">
           <a href="https://mymovies-database.herokuapp.com/" target="_blank">Open website</a>
           <a href="https://github.com/lakkot/movie_api" target="_blank">Project GitHub page</a>
         </div>
+      </div>
 
-			</div>
+      <div class="grid__item">
+				<h2>Chat App (React Native)</h2>
+        <img src="img/chatApp.png" class="project__photo" alt="My Photo" >
+				<p> Progressive web application (PWA) built with React using a test-driven development (TDD) technique, using Serverless Functions (Amazon Lambda) and Meetup's API </p>
+        <div class="project-links">
+          <a href="https://youtu.be/0jJ06bKqrzw" target="_blank">See app in action (video)</a>
+          <a href="https://github.com/lakkot/hello-world" target="_blank">Project GitHub page</a>
+        </div>
+      </div>
+      
+      <div class="grid__item">
+				<h2>Meetup Clone (React, Serverless)</h2>
+        <img src="img/meetupMockup.png" class="project__photo" alt="My Photo" >
+				<p> Progressive web application (PWA) built with React using a test-driven development (TDD) technique, using Serverless Functions (Amazon Lambda) and Meetup's API </p>
+        <div class="project-links">
+          <a href="https://lakkot.github.io/meetup/" target="_blank">Open website</a>
+          <a href="https://github.com/lakkot/meetup" target="_blank">Project GitHub page</a>
+        </div>
+      </div>
+      
 			<div class="grid__item">
-				<h2>Quiz App (Angular)</h2>
+        <h2>Quiz App (Angular)</h2>
+        <img src="img/quizApp.png" class="project__photo" alt="My Photo" >
 				<p> A front-end ap where user can choose for selection of quizzes. After filling out the quiz user can view results. Written in Angular JS </p>
         <div class="project-links">
           <a href="https://lakkot.github.io/my-quiz-app/" target="_blank">Open website</a>
           <a href="https://github.com/lakkot/my-quiz-app" target="_blank">Project GitHub page</a>
         </div>
-			</div>
+      </div>
+      
 			<div class="grid__item">
-				<h2>Portfolio Website</h2>
+        <h2>Portfolio Website</h2>
+        <img src="img/portfolio.png" class="project__photo" alt="My Photo" >
 				<p> Static website built with HTML and CSS (this website) </p>
         <div class="project-links">
           <a href="https://lakkot.github.io/portfolio-website/index.html" target="_blank">Open website</a>
           <a href="https://github.com/lakkot/portfolio-website" target="_blank">Project GitHub page</a>
-        </div>			</div>
+        </div>
+      </div>
+
 			<div class="grid__item">
 				<h2>To do list (Vue.js)</h2>
+        <img src="img/todoList.png" class="project__photo" alt="My Photo" >
 				<p> To do list. User can add new poitions, edit list, mark objects as completed and delete items from list. </p>
         <div class="project-links">
           <a href="https://lakkot.github.io/memento-vue/" target="_blank">Open website</a>
           <a href="https://github.com/lakkot/memento-vue" target="_blank">Project GitHub page</a>
         </div>
-			</div>
+      </div>
+      
+      <div class="grid__item">
+				<h2>Pokedex (jQuery)</h2>
+        <img src="img/pokedex.png" class="project__photo" alt="My Photo" >
+				<p> An app written in jQuery, showing a list of Pokemon. Get details on Pokemon from the list by clicking the name. </p>
+        <div class="project-links">
+          <a href="https://lakkot.github.io/simple-jQuery-app/" target="_blank">Open website</a>
+          <a href="https://github.com/lakkot/simple-jQuery-app" target="_blank">Project GitHub page</a>
+        </div>
+      </div>
+
 			<div class="grid__item">
 				<h2>Approval Tool</h2>
+        <img src="img/workflowTool.png" class="project__photo" alt="My Photo" >
         <p> Multi-level approval tool for documents, performed via email without the need for the approvers to create accounts. </br> User first creates lists of approver emails, then uploads a document, adds description and chooses approvers. Documents are then sent sequentially to the approvers via email. Operated as subscription service. Utilizes Amazon S3 bucket and braintree payments. Written in MERN (MongoDB, Express JS, React and Node JS).</p>
         <div class="project-links">
           <a href="https://www.approvaltool.com/client/homepage" target="_blank">Open website</a>
