@@ -407,6 +407,12 @@ table {
     -ms-grid-columns: 1fr !important;
     grid-template-columns: 1fr !important;
   }
+
+  .grid__item {
+    max-width: 80vh!important;
+  }
+
+  .animation
 }
 /*
 @media all and (min-width: 500px) and (max-width: 750px) {
