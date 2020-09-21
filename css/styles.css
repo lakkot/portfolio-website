@@ -367,6 +367,15 @@ table {
   .project__photo {
     max-width: 100%;
   }
+
+  .animation {
+    max-width: 100%;
+    border: 1px solid black;
+  }
+
+  .berlin-illustration {
+    width: 100%;
+  }
 }
 /*
 @media all and (min-width: 500px) and (max-width: 750px) {
