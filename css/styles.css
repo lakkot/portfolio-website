@@ -354,19 +354,23 @@ table {
 
 /* more compact writing of all media formatting with common parameters presented together */
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 1000px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
-
+/*
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+*/
+@media all and (max-width: 1500px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-@media all and (max-width: 750px) {
   .grid__item:last-child {
     grid-row: auto / auto;
     grid-column: auto / auto;

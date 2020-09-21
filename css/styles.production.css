@@ -202,10 +202,6 @@ button:focus,
   text-align: center;
 }
 
-#impressum {
-  margin: 80px 0 0 60px;
-}
-
 .page-footer {
   background-color: var(--background-color);
   clear: both;
@@ -357,6 +353,22 @@ table {
   padding: 10px;
 }
 
+.contact {
+  max-width: 400px; 
+  text-align: left !important;
+  padding: 40px;
+  margin: 100px auto;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.contact h2 {
+  text-align: left;
+}
+
+
+
 /* loger way to write the all media thing
 @media all and (max-width: 500px) {
   .grid {
@@ -390,21 +402,25 @@ table {
 
 /* more compact writing of all media formatting with common parameters presented together */
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 1000px) {
   .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr !important;
+    grid-template-columns: 1fr !important;
   }
 }
-
+/*
 @media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+*/
+@media all and (max-width: 1500px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
-}
 
-@media all and (max-width: 750px) {
   .grid__item:last-child {
     grid-row: auto / auto;
     grid-column: auto / auto;
