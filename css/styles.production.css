@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*
 Colors used
 
 Text Color (Dark Gray): #2b2b2b;
@@ -24,7 +31,8 @@ Secondary Color (Orange): #e0b354;
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -114,6 +122,8 @@ button,
   */
 
   /* shorter way to write the above */
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
   transition: 0.5s opacity;
 }
 
@@ -177,8 +187,13 @@ button:focus,
 }
 
 #homepagelinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 300px;
   min-width: 100px;
   clear: both;
@@ -190,10 +205,17 @@ button:focus,
 .page-footer {
   background-color: var(--background-color);
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   bottom: 0;
   height: 90px;
@@ -202,8 +224,12 @@ button:focus,
 }
 
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding: 40px;
   background-color: var(--background-color);
@@ -213,11 +239,15 @@ button:focus,
 }
 
 .page-header__item {
-  flex: 0 1 200px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -241,13 +271,21 @@ section {
 }
 
 .grid__item {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   padding: 20px;
   background-color: var(--background-color-grid);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .grid__item p {
@@ -256,6 +294,8 @@ section {
 
 .grid__item:hover {
   background-color: var(--background-color-grid-hover);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -268,8 +308,12 @@ section {
 }
 
 .project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .project__photo {
@@ -280,6 +324,8 @@ section {
 
 .project__photo:hover {
   opacity: 0.8;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s
 }
 
@@ -293,6 +339,7 @@ section {
 */
 
 form {
+  display: -ms-grid;
   display: grid;
   margin: 0 auto;
   text-align: center;
@@ -311,7 +358,8 @@ table {
   text-align: left !important;
   padding: 40px;
   margin: 100px auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
 }
 
@@ -319,6 +367,9 @@ table {
   text-align: left;
 }
 
+.smlogo {
+  padding: 0 10px;
+}
 
 
 /* loger way to write the all media thing
@@ -356,6 +407,7 @@ table {
 
 @media all and (max-width: 1000px) {
   .grid {
+    -ms-grid-columns: 1fr !important;
     grid-template-columns: 1fr !important;
     width: 100%;
   }
@@ -385,6 +437,7 @@ table {
 */
 @media all and (max-width: 1500px) {
   .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -417,6 +470,20 @@ table {
   border-radius: 2px;
 }
 
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -442,33 +509,64 @@ table {
 */
 
 .sun {
-  animation: 4s color-change infinite alternate linear;
+  -webkit-animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
 }
 
 @keyframes cloud-move {
   from {
-    transform: translate(0, 50px);
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
-    transform: translate(200px, 50px);
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 
 .cloud-front {
-  animation: 30s cloud-move infinite alternate ease-in;
+  -webkit-animation: 30s cloud-move infinite alternate ease-in;
+          animation: 30s cloud-move infinite alternate ease-in;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(40px, 48px);
+            transform: translate(40px, 48px);
+  }
 }
 
 @keyframes cloud-move-reverse {
   from {
-    transform: translate(446px, 48px);
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
 
   to {
-    transform: translate(40px, 48px);
+    -webkit-transform: translate(40px, 48px);
+            transform: translate(40px, 48px);
   }
 }
 
 .cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate ease-out;
+  -webkit-animation: 34s cloud-move-reverse infinite alternate ease-out;
+          animation: 34s cloud-move-reverse infinite alternate ease-out;
 }
