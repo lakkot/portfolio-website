@@ -158,8 +158,11 @@ button:focus,
   padding-top: 100px;
   max-width: 1000px;
   min-height: 400px;
-  margin: 0 auto;   
+  margin: 0 auto;
+  display: flex;
 }
+
+
 
 .profile p {
   text-align: justify;
@@ -377,6 +380,10 @@ table {
 
   .berlin-illustration {
     width: 100%;
+  }
+
+  .profile {
+    display: block;
   }
 }
 /*
